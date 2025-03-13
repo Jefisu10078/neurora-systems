@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurora Systems</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Neurora Logo</div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Soluções</a></li>
+                <li><a href="#pricing">Preços</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button"><p2>Entre em contato</p2></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Entre em contato</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/IA.png" alt="AI Assistant Dashboard">
+            </div>
+        </div>
+    </section>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="container">
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="/assets/banner1.jpg" alt="Banner Image 1" class="banner-image">
+                    </div>
+                    <div class="slide fade">
+                        <img src="/assets/banner2.jpg" alt="Banner Image 2" class="banner-image">
+                    </div>
+                    <div class="slide fade">
+                        <img src="/assets/banner3.jpg" alt="Banner Image 3" class="banner-image">
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+                    <!-- Dots/circles -->
+                    <div class="dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+    <!-- Use Cases -->
+    <section id="features" id="use-cases" class="use-cases">
+        <div class="container">
+            <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Propósito</h3>
+                    <p>Nosso propósito é transformar a interação entre clientes e empresas por meio de soluções inteligentes, automatizando o atendimento de forma humanizada, criativa e eficiente.</p>
+                </div>
+                <div class="use-case-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Missão</h3>
+                    <p>Nossa missão é fazer com que nosso agente de IA sirva de ponte entre cliente e empresa, auxiliando com informações, explicações e opções para seja feita sempre a melhor escolha.</p>
+                </div>
+                <div class="use-case-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Valores</h3>
+                    <p>Ser referência global em IA generativa, criando agentes de inteligência verdadeiramente práticos e humanos, capazes de transformar a interação entre pessoas e tecnologia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Customer Testimonials Grid -->
+    <section class="why-us">
+        <div class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="why-us-grid">
+                <div class="why-us-card testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"A Neurora transformou completamente nossa forma de atender clientes. O atendimento é rápido e eficiente!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/pessoa.jpg" alt="Maria Silva">
+                        <div class="author-info">
+                            <h3>Maria Silva</h3>
+                            <p>CEO, TechBrasil</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-card testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Desde que implementamos a IA da Neurora, nossa produtividade aumentou em 200%. Incrível!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/pessoa.jpg" alt="João Santos">
+                        <div class="author-info">
+                            <h3>João Santos</h3>
+                            <p>Diretor, Inova Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-card testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"A integração foi simples e os resultados foram imediatos. Nossos clientes adoram!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/pessoa.jpg" alt="Ana Oliveira">
+                        <div class="author-info">
+                            <h3>Ana Oliveira</h3>
+                            <p>Gerente, Digital Pro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-us-card testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>"O suporte é excepcional e a IA aprende rapidamente com nossas necessidades específicas."</p>
+                    <div class="testimonial-author">
+                        <img src="assets/pessoa.jpg" alt="Pedro Costa">
+                        <div class="author-info">
+                            <h3>Pedro Costa</h3>
+                            <p>CTO, Future Tech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-card testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>"A melhor decisão que tomamos foi implementar a solução da Neurora. ROI impressionante!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/pessoa.jpg" alt="Carla Mendes">
+                        <div class="author-info">
+                            <h3>Carla Mendes</h3>
+                            <p>Diretora, Smart Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-card testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Atendimento personalizado e eficiente. Nossa equipe está muito mais produtiva!"</p>
+                    <div class="testimonial-author">
+                        <img src="assets/pessoa.jpg" alt="Roberto Lima">
+                        <div class="author-info">
+                            <h3>Roberto Lima</h3>
+                            <p>CEO, Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Casos de uso</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Aguardando conteúdo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Aguardando conteúdo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Aguardando conteúdo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Como funciona?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Automação Inteligente</h3>
+                    <p class="preview-text">Nossa solução de IA oferece automação avançada que se adapta às suas necessidades específicas, aprendendo e evoluindo constantemente...</p>
+                    <p class="full-text hidden">Nossa solução de IA oferece automação avançada que se adapta às suas necessidades específicas, aprendendo e evoluindo constantemente. Utilizando algoritmos de última geração, nosso sistema automatiza tarefas complexas, reduz erros e aumenta a eficiência operacional em até 300%.</p>
+                    <button class="read-more-btn">Ler mais</button>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Atendimento 24/7</h3>
+                    <p class="preview-text">Garanta suporte ininterrupto aos seus clientes com nossa IA que oferece respostas precisas e personalizadas...</p>
+                    <p class="full-text hidden">Garanta suporte ininterrupto aos seus clientes com nossa IA que oferece respostas precisas e personalizadas. Nossa solução mantém consistência no atendimento, aprende com cada interação e se adapta ao tom e estilo da sua empresa, proporcionando uma experiência excepcional aos seus clientes.</p>
+                    <button class="read-more-btn">Ler mais</button>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Insights Analíticos</h3>
+                    <p class="preview-text">Transforme dados em decisões estratégicas com nossa análise avançada que identifica padrões e tendências...</p>
+                    <p class="full-text hidden">Transforme dados em decisões estratégicas com nossa análise avançada que identifica padrões e tendências. Nossa IA processa grandes volumes de dados em tempo real, fornecendo insights acionáveis que ajudam a otimizar operações, prever tendências e melhorar a satisfação do cliente.</p>
+                    <button class="read-more-btn">Ler mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Chart Section -->
+    <section class="performance-chart">
+        <div class="container">
+            <h2>Impacto em Números</h2>
+            <p>Veja a melhoria no atendimento após implementar nossa solução</p>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Conheça nossos planos</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Inicial</h3>
+                    <div class="price">R$9<span>/mês</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Basic AI features</li>
+                        <li><i class="fas fa-check"></i> 100 tasks/mês</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Profissional</h3>
+                    <div class="price">R$29<span>/mês</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Advanced AI features</li>
+                        <li><i class="fas fa-check"></i> Unlimited tasks</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                    </ul>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Empresarial</h3>
+                    <div class="price">R$99<span>/mês</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Custom AI solutions</li>
+                        <li><i class="fas fa-check"></i> Unlimited everything</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                    </ul>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Preparado para transformar seu negócio?</h2>
+            <p>Entre em contato e adquira a melhor ferramenta de atendimento IA do mercado!</p>
+            <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Entre em contato</a>
+            <p class="cta-subtext">Atendimento 24 horas</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona o agente de IA?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nosso agente de IA utiliza algoritmos avançados de aprendizado de máquina para entender e automatizar seus processos de negócios. Ele aprende com seus fluxos de trabalho existentes e melhora continuamente seu desempenho.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo leva para implementar a solução?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A implementação típica leva de 1 a 2 semanas, dependendo da complexidade do seu negócio. Nossa equipe trabalha em estreita colaboração com você para garantir uma transição suave e eficiente.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>A IA pode ser personalizada para meu negócio?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Nossa IA é altamente personalizável e pode ser adaptada às necessidades específicas do seu negócio, incluindo tom de voz, processos e regras de negócio particulares.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Que tipo de suporte vocês oferecem?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oferecemos suporte 24/7 para todos os clientes, com tempos de resposta garantidos e uma equipe dedicada de especialistas para ajudar com qualquer questão técnica ou operacional.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como vocês garantem a segurança dos dados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Utilizamos criptografia de ponta a ponta e seguimos os mais rigorosos padrões de segurança da indústria. Todos os dados são armazenados em servidores seguros com backup regular.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Neurora Systems</h3>
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Carreira</a></li>
+                        <li><a href="https://web.whatsapp.com/send?phone=5511946358432">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Produto</h3>
+                    <ul>
+                        <li><a href="#features">Soluções</a></li>
+                        <li><a href="#pricing">Preços</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://web.whatsapp.com/send?phone=5511946358432"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/neurora_systems?igsh=MTYxbzZweDh0YzUxbQ%3D%3D&utm_source=qr "><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61573890776992&locale=pt_BR"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="security-badges">
+                <img src="/assets/SSL.png" title="SSL Secure Connection" style="height: 40px;">
+                <img src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-09.png" alt="DMCA Protected" title="DMCA Protected">
+                <img src="https://www.pcisecuritystandards.org/wp-content/uploads/2022/03/pci-logo-teal.svg" alt="PCI Compliant" title="PCI Compliant" style="height: 40px;">
+                <img src="/assets/LGPD.png" alt="LGPD Compliant" title="LGPD Compliant" style="height: 40px;">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neurora Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
