@@ -800,7 +800,7 @@ p2:hover {
 .cta-section {
     padding: 5rem 0;
     text-align: center;
-    background-color: var(--primary-color);
+    background: linear-gradient(to right, #5C7DE9, #17E9D9);
     color: white;
 }
 
