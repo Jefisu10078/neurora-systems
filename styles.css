@@ -100,6 +100,18 @@ p2:hover {
     align-items: center;
 }
 
+.logo img {
+    max-height: 2.8em;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .logo img {
+        max-height: 2.5em;
+    }
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
@@ -823,6 +835,34 @@ p2:hover {
 
 .footer-col h3 {
     margin-bottom: 1.5rem;
+}
+
+.footer-col .logo img {
+    height: 4em;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 510px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer-col ul {
