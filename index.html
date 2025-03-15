@@ -6,7 +6,7 @@
     <title>Neurora Systems</title>
     <link rel="icon" type="image/png" href="assets/5-hero.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -283,38 +283,81 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <h2>Conheça nossos planos</h2>
-            <div class="pricing-grid">
+            <div class="pricing-toggle">
+                <button class="toggle-btn active" data-pricing="monthly">Mensal</button>
+                <button class="toggle-btn" data-pricing="annual">Anual</button>
+            </div>
+            <div class="pricing-grid monthly-pricing active">
                 <div class="pricing-card">
                     <h3>Inicial</h3>
                     <div class="price">R$9<span>/mês</span></div>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
                     <ul>
                         <li><i class="fas fa-check"></i> Basic AI features</li>
                         <li><i class="fas fa-check"></i> 100 tasks/mês</li>
                         <li><i class="fas fa-check"></i> Email support</li>
                     </ul>
-                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                   
                 </div>
                 <div class="pricing-card featured">
                     <h3>Profissional</h3>
                     <div class="price">R$29<span>/mês</span></div>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
                     <ul>
                         <li><i class="fas fa-check"></i> Advanced AI features</li>
                         <li><i class="fas fa-check"></i> Unlimited tasks</li>
                         <li><i class="fas fa-check"></i> Priority support</li>
                         <li><i class="fas fa-check"></i> Custom integrations</li>
                     </ul>
-                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                    
                 </div>
                 <div class="pricing-card">
                     <h3>Empresarial</h3>
                     <div class="price">R$99<span>/mês</span></div>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
                     <ul>
                         <li><i class="fas fa-check"></i> Custom AI solutions</li>
                         <li><i class="fas fa-check"></i> Unlimited everything</li>
                         <li><i class="fas fa-check"></i> 24/7 support</li>
                         <li><i class="fas fa-check"></i> Dedicated account manager</li>
                     </ul>
+                </div>
+            </div>
+            <div class="pricing-grid annual-pricing">
+                <div class="pricing-card">
+                    <h3>Inicial</h3>
+                    <div class="price">R$90<span>/ano</span></div>
+                    <div class="savings">Economize 15%</div>
                     <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Basic AI features</li>
+                        <li><i class="fas fa-check"></i> 100 tasks/mês</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Profissional</h3>
+                    <div class="price">R$290<span>/ano</span></div>
+                    <div class="savings">Economize 15%</div>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Advanced AI features</li>
+                        <li><i class="fas fa-check"></i> Unlimited tasks</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Empresarial</h3>
+                    <div class="price">R$990<span>/ano</span></div>
+                    <div class="savings">Economize 15%</div>
+                    <a href="https://web.whatsapp.com/send?phone=5511946358432" class="cta-button">Escolher Plano</a>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Custom AI solutions</li>
+                        <li><i class="fas fa-check"></i> Unlimited everything</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -427,5 +470,10 @@
     </footer>
 
     <script src="script.js"></script>
+</body>
+</html>
+<button class="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-sun"></i>
+</button>
 </body>
 </html>

@@ -1,5 +1,6 @@
 let slideIndex = 1;
 let slideInterval;
+let currentChart = null;
 
 // Initialize the slideshow
 function initSlideshow() {
@@ -61,10 +62,15 @@ function initMobileMenu() {
     });
 }
 
-// Initialize when the page loads
 // Initialize performance chart
 function initPerformanceChart() {
-    const ctx = document.getElementById('performanceChart').getContext('2d');
+    const ctx = document.getElementById('performanceChart');
+    if (!ctx) return;
+
+    // Destroy existing chart if it exists
+    if (currentChart) {
+        currentChart.destroy();
+    }
     
     const data = {
         labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
@@ -116,7 +122,7 @@ function initPerformanceChart() {
         }
     };
 
-    new Chart(ctx, config);
+    currentChart = new Chart(ctx.getContext('2d'), config);
 }
 
 // FAQ functionality
@@ -140,31 +146,89 @@ function initFAQ() {
     });
 }
 
+// Handle Read More buttons in benefits section
+function initReadMoreButtons() {
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.benefit-card');
+            const fullText = card.querySelector('.full-text');
+            const previewText = card.querySelector('.preview-text');
+            
+            fullText.classList.toggle('hidden');
+            
+            if (fullText.classList.contains('hidden')) {
+                this.textContent = 'Ler mais';
+                previewText.style.display = 'block';
+            } else {
+                this.textContent = 'Ler menos';
+                previewText.style.display = 'none';
+            }
+        });
+    });
+}
+
+function initThemeToggle() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (!themeToggle) return;
+
+    const themeIcon = themeToggle.querySelector('i');
+    if (!themeIcon) return;
+
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? null : 'dark';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        // Toggle icon
+        themeIcon.classList.toggle('fa-sun');
+        themeIcon.classList.toggle('fa-moon');
+    });
+}
+
 // Initialize everything when the page loads
+function initPricingToggle() {
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    const monthlyPricing = document.querySelector('.monthly-pricing');
+    const annualPricing = document.querySelector('.annual-pricing');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            toggleButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Toggle pricing grids
+            if (button.dataset.pricing === 'monthly') {
+                monthlyPricing.classList.add('active');
+                annualPricing.classList.remove('active');
+            } else {
+                annualPricing.classList.add('active');
+                monthlyPricing.classList.remove('active');
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initSlideshow();
     initMobileMenu();
     initPerformanceChart();
     initFAQ();
-});
-
-// Handle Read More buttons in benefits section
-const readMoreButtons = document.querySelectorAll('.read-more-btn');
-
-readMoreButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const card = this.closest('.benefit-card');
-        const fullText = card.querySelector('.full-text');
-        const previewText = card.querySelector('.preview-text');
-        
-        fullText.classList.toggle('hidden');
-        
-        if (fullText.classList.contains('hidden')) {
-            this.textContent = 'Ler mais';
-            previewText.style.display = 'block';
-        } else {
-            this.textContent = 'Ler menos';
-            previewText.style.display = 'none';
-        }
-    });
+    initReadMoreButtons();
+    initThemeToggle();
+    initPricingToggle();
 });
