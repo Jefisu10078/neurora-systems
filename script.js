@@ -176,13 +176,30 @@ function initThemeToggle() {
     const themeIcon = themeToggle.querySelector('i');
     if (!themeIcon) return;
 
+    const logo = document.querySelector('.logo img');
+    if (!logo) return;
+
+    // Function to update logos based on theme
+    const updateLogo = (isDark) => {
+        logo.src = isDark ? 'assets/logo-white.png' : 'assets/logo-black.png';
+        const footerLogo = document.querySelector('.footer .logo img');
+        if (footerLogo) {
+            footerLogo.src = isDark ? 'assets/logo-wt.png' : 'assets/logo-bk.png';
+        }
+    };
+
     // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
+    // Ensure icon has the correct initial class
+    themeIcon.classList.remove('fa-sun', 'fa-moon');
+    themeIcon.classList.add('fa-sun');
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.documentElement.setAttribute('data-theme', 'dark');
         themeIcon.classList.replace('fa-sun', 'fa-moon');
+        updateLogo(true);
     }
 
     themeToggle.addEventListener('click', () => {
@@ -192,9 +209,12 @@ function initThemeToggle() {
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
 
-        // Toggle icon
+        // Update theme icon
         themeIcon.classList.toggle('fa-sun');
         themeIcon.classList.toggle('fa-moon');
+
+        // Update logo based on new theme
+        updateLogo(newTheme === 'dark');
     });
 }
 
