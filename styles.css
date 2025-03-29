@@ -250,14 +250,13 @@ p2:hover {
 
 .hero-image {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 150px;
+    max-width: 250px;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
-    border-radius: var(--border-radius);
 }
 
 @media (max-width: 768px) {
@@ -279,10 +278,8 @@ p2:hover {
 }
 
 .hero-image img {
-    width: 100%;
+    width: 140%;
     height: auto;
-    border-radius: var(--border-radius);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Banner Section */
