@@ -226,13 +226,18 @@ p2:hover {
 .hero .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    gap: 10rem;
     flex-wrap: wrap;
     text-align: left;
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 1.5rem;
+}
+
+@media (max-width: 1020px) {
+    .hero .container {
+        gap: 0;
+    }
 }
 
 @media (max-width: 800px) {
