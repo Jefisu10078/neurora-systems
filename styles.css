@@ -86,7 +86,7 @@ p {
 .cta-button-emp {
     display: inline-block;
     padding: 1rem 2rem;
-    margin-top: 7em;
+    margin-top: 0;
     background-color: var(--primary-color);
     color: white;
     text-decoration: none;
@@ -98,7 +98,7 @@ p {
 .cta-button-emp2 {
     display: inline-block;
     padding: 1rem 2rem;
-    margin-top: 9em;
+    margin-top: 2em;
     background-color: var(--primary-color);
     color: white;
     text-decoration: none;
@@ -728,6 +728,13 @@ p2:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+}
+
+.pricing-logo {
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    margin: 0 auto 1.5rem auto;
 }
 
 .pricing-card.featured {

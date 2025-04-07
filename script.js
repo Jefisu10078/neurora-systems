@@ -186,6 +186,11 @@ function initThemeToggle() {
         if (footerLogo) {
             footerLogo.src = isDark ? 'assets/logo-wt.png' : 'assets/logo-bk.png';
         }
+        // Update pricing card logos
+        const pricingLogos = document.querySelectorAll('.pricing-logo');
+        pricingLogos.forEach(pricingLogo => {
+            pricingLogo.src = isDark ? 'assets/logo-wt.png' : 'assets/logo-bk.png';
+        });
     };
 
     // Check for saved theme preference or use system preference
